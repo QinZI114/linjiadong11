@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="noindex, nofollow" name="robots"/>
+  <meta content="课程练习：个人介绍、技能与作品门户。" name="description"/>
+  <title>
+   我的个人主页
+  </title>
+  <link href="assets/favicon-nailong.png" rel="icon" type="image/png"/>
+  <!-- CSS 负责颜色、字体、布局；defer 让 JavaScript 在 HTML 解析完成后执行。 -->
+  <link href="styles.css" rel="stylesheet"/>
+   <script src="works-data.js" defer></script>
+  <script src="works-render.js" defer></script>
+  <script src="app.js" defer></script>
+ </head>
+ <body>
+  <a class="skip-link" href="#main">
+   跳到正文
+  </a>
+  <!-- 第 4 课新增①：顶部阅读进度条，宽度由 JavaScript 控制 -->
+  <div class="reading-progress" id="reading-progress">
+  </div>
+  <header class="site-header">
+   <div class="container header-inner">
+    <a class="brand" href="#about">
+     <img alt="奶龙风格头像图标" class="brand-avatar" height="34" src="assets/avatar-nailong.png" width="34"/>
+     我的主页
+    </a>
+    <!-- href="#栏目ID" 是原生锚点：即使不加载 JavaScript，也能跳到对应栏目。 -->
+    <nav aria-label="主导航">
+     <a href="#about">
+      关于
+     </a>
+     <a href="#experience">
+      经历
+     </a>
+     <a href="#projects">
+      科研
+     </a>
+     <a href="#skills">
+      技能
+     </a>
+     <a href="#portfolio">
+      作品
+     </a>
+     <a href="#teaching">
+      教学
+     </a>
+     <a href="#publications">
+      成果
+     </a>
+    </nav>
+   </div>
+  </header>
+  <main id="main">
+   <!-- HTML 练习：修改姓名、研究方向、照片路径和联系方式。 -->
+   <section class="hero" id="about">
+    <div class="container">
+     <div class="hero-top">
+      <div class="hero-copy">
+       <h1>
+        林家栋
+        <span>
+         Lin
+        </span>
+       </h1>
+       <p class="hero-role">
+        大模型应用开发专业在读 · 前端开发学习中
+       </p>
+       <p class="hero-school">
+        广东科学职业技术学院 · 25级大模型应用开发
+       </p>
+       <p class="hero-motto">
+        像奶龙一样，圆润但不断生长 🐲
+       </p>
+      </div>
+      <div class="hero-visual">
+       <figure>
+        <img alt="奶龙风格个人头像" height="220" src="assets/avatar-nailong.png" width="220"/>
+       </figure>
+      </div>
+     </div>
+     <div class="research-direction" id="research-direction">
+      <span class="eyebrow">
+       学习方向
+      </span>
+      <p>
+       HTML5 / CSS3 / JavaScript 打基础，正在学习 Git 版本管理、数据库与网站部署，目标是能独立做出完整的大模型应用。
+      </p>
+     </div>
+     <div class="profile-details">
+      <div>
+       <span>
+        学习阶段
+       </span>
+       <p>
+        在校学习
+       </p>
+      </div>
+      <div>
+       <span>
+        所在城市
+       </span>
+       <p>
+        珠海
+       </p>
+      </div>
+      <div>
+       <span>
+        联系
+       </span>
+       <p>
+        18811899505
+       </p>
+      </div>
+      <div>
+       <span>
+        学校地址
+       </span>
+       <p>
+        广东省珠海市
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- 每个栏目复用 section → container → 标题/内容 的结构，统一由 CSS 控制样式。 -->
+   <section class="section" id="experience">
+    <div class="container">
+     <header class="section-heading">
+      <h2>
+       教育与工作经历
+      </h2>
+     </header>
+     <div class="section-content">
+      <!-- TASK-HTML：复制 experience-item 可增加一条自己的经历。 -->
+      <div class="experience-item">
+       <p class="experience-heading">
+        <strong>
+         广东科学职业技术学院 · 大模型应用开发专业
+        </strong>
+        <time>
+         2025 级 · 在读
+        </time>
+       </p>
+       <p class="experience-detail">
+        系统学习网页开发三件套与 AI 应用开发，坚持用真实项目记录每一步成长，作品均已部署上线可访问。
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="projects">
+    <div class="container">
+     <header class="section-heading">
+      <h2>
+       项目经历
+      </h2>
+     </header>
+     <div class="section-content">
+      <article class="research-item">
+       <h3>
+        <time>
+         2025 – 至今
+        </time>
+        个人主页 · 作品门户站
+       </h3>
+       <p>
+        从零搭建个人主页：编写 HTML 结构、设计响应式样式，用 JavaScript 实现筛选、排序与滚动交互；通过 Git 管理版本，并借助 CI/CD 自动化检查与部署上线。
+       </p>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="skills">
+    <div class="container">
+     <header class="section-heading">
+      <h2>
+       技能与实践
+      </h2>
+     </header>
+     <div class="section-content">
+      <ul class="skills-list">
+       <li>
+        <strong>
+         网页内容
+        </strong>
+        HTML5 语义化结构、图片、链接与无障碍实践。
+       </li>
+       <li>
+        <strong>
+         页面样式
+        </strong>
+        CSS3 字体、配色、响应式布局与动效。
+       </li>
+       <li>
+        <strong>
+         开发流程
+        </strong>
+        JavaScript 交互、Git 版本管理、自动化检查与部署。
+       </li>
+       <li>
+        <strong>
+         AI 应用
+        </strong>
+        大模型应用开发基础，探索 AI 与前端结合的场景。
+       </li>
+       <li>
+        <strong>
+         数据基础
+        </strong>
+        数据库入门，为应用接入真实数据。
+       </li>
+       <li>
+        <strong>
+         学习习惯
+        </strong>
+        每次改动都可运行、可验证、可回溯。
+       </li>
+      </ul>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="portfolio">
+    <div class="container">
+     <header class="section-heading">
+      <h2>
+       作品门户
+      </h2>
+      <p class="works-notice">
+       以下均为自己完成并部署上线的项目，点击卡片可直接访问。
+      </p>
+     </header>
+     <!-- 第 5 课新增：筛选与排序工具条。里面的按钮由 JavaScript 生成，
+          不写 JS 时这里是空的，页面照常显示全部作品。 -->
+     <div class="works-toolbar">
+      <div class="works-tags" id="works-tags">
+      </div>
+      <button class="works-sort" id="works-sort" type="button">
+       按年份：新→旧
+      </button>
+     </div>
+     <ol class="portfolio-list">
+      <li class="work-card work-blog">
+       <a href="https://ffd-p2-blog.netlify.app/" rel="noopener noreferrer" target="_blank">
+        <div class="work-cover">
+         <img alt="长风成卷 · 博客应用的实际网页截图" decoding="async" height="800" src="assets/work-blog.png" width="1200"/>
+        </div>
+        <div class="work-copy">
+         <h3>
+          长风成卷 · 博客应用
+         </h3>
+         <p>
+          文章展示、接口与数据库。
+         </p>
+        </div>
+       </a>
+      </li>
+      <li class="work-card work-community">
+       <a href="https://ffd-p3-community.netlify.app/" rel="noopener noreferrer" target="_blank">
+        <div class="work-cover">
+         <img alt="群像云图 · 社区应用的实际网页截图" decoding="async" height="800" src="assets/work-community.png" width="1200"/>
+        </div>
+        <div class="work-copy">
+         <h3>
+          群像云图 · 社区应用
+         </h3>
+         <p>
+          内容发布与社区互动。
+         </p>
+        </div>
+       </a>
+      </li>
+      <li class="work-card work-greeting-card">
+       <a href="https://ffd-p4-greeting-card.netlify.app/" rel="noopener noreferrer" target="_blank">
+        <div class="work-cover">
+         <img alt="一笺心意 · 祝福卡片的实际网页截图" decoding="async" height="800" src="assets/work-greeting-card.png" width="1200"/>
+        </div>
+        <div class="work-copy">
+         <h3>
+          一笺心意 · 祝福卡片
+         </h3>
+         <p>
+          卡片制作与作品分享。
+         </p>
+        </div>
+       </a>
+      </li>
+      <li class="work-card work-music-station">
+       <a href="https://ffd-p5-music-station.netlify.app/" rel="noopener noreferrer" target="_blank">
+        <div class="work-cover">
+         <img alt="星声音乐站 · 音乐应用的实际网页截图" decoding="async" height="800" src="assets/work-music-station.png" width="1200"/>
+        </div>
+        <div class="work-copy">
+         <h3>
+          星声音乐站 · 音乐应用
+         </h3>
+         <p>
+          网页音频与交互实践。
+         </p>
+        </div>
+       </a>
+      </li>
+     </ol>
+    </div>
+   </section>
+   <section class="section" id="teaching">
+    <div class="container">
+     <header class="section-heading">
+      <h2>
+       学习与实践
+      </h2>
+     </header>
+     <div class="section-content">
+      <div class="teaching-group">
+       <h3>
+        本学期目标
+       </h3>
+       <ol>
+        <li>
+         每次课完成一个可运行的小改动，积少成多。
+        </li>
+        <li>
+         能清楚解释自己写的每一行 HTML、CSS 和 JavaScript。
+        </li>
+        <li>
+         用 Git 记录版本，让每个作品都能被别人访问。
+        </li>
+        <li>
+         做出一个真正的大模型应用，作为本学期收官作品。
+        </li>
+       </ol>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="publications">
+    <div class="container">
+     <header class="section-heading">
+      <h2>
+       学习记录
+      </h2>
+     </header>
+     <div class="section-content">
+      <div class="publication-group">
+       <h3>
+        我的记录
+       </h3>
+       <ol class="references">
+        <li>
+         完成个人主页 1.0：HTML 结构与基础样式，成功部署上线。
+        </li>
+        <li>
+         加入 JavaScript 交互：作品筛选、排序、滚动进度条与导航高亮。
+        </li>
+        <li>
+         接入 CI/CD：提交自动触发检查与部署，坏代码不再上线。
+        </li>
+        <li>
+         后续持续在这里补充新的成果。
+        </li>
+       </ol>
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+  <!-- 第 4 课新增：这两块由 JavaScript 控制，不写 JS 时它们不会出现 -->
+  <p aria-live="polite" class="section-indicator" id="section-indicator">
+  </p>
+  <button aria-label="返回页面顶部" class="to-top" id="to-top" type="button">
+   ↑
+  </button>
+  <footer>
+   <div class="container footer-inner">
+    <a href="#about">
+     回到顶部
+    </a>
+    <a href="#portfolio">
+     作品门户
+    </a>
+   </div>
+  </footer>
+ </body>
+</html>
